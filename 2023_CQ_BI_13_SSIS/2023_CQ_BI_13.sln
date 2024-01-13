@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "2023_CQ_BI_13", "2023_CQ_BI_13\2023_CQ_BI_13.dtproj", "{89E06AE4-56ED-47F0-A781-4419FD616625}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89E06AE4-56ED-47F0-A781-4419FD616625}.Development|Default.ActiveCfg = Development
+		{89E06AE4-56ED-47F0-A781-4419FD616625}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9BA8E16-3A27-45C5-B70C-2A9FB1D022D1}
+	EndGlobalSection
+EndGlobal

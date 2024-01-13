@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/23/2023 8:43:22 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="REVISION-PC"
+  DTS:CreatorName="REVISION-PC\Thuan"
+  DTS:DTSID="{CD67A70B-836A-4274-AA08-B740682EA3F4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1066"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{51CED319-9B68-4615-A3B6-F96F0973EA00}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\NDS to DDS"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="NDS to DDS"
+      DTS:DTSID="{05DB9A75-0D2C-4985-BB73-1A2305BB6964}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="NDS to DDS"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>nds_to_dds.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Source system to Stage"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Source system to Stage"
+      DTS:DTSID="{EAB0CF71-C64A-44C6-9734-9FEE2062E70F}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Source system to Stage"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>source_system_to_stage.dtsx</PackageName>
+          <PackagePassword
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASKgWMCuAeEOpdSAVvIeMugAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD1gXNqwqQHU0eA2d/xA/ZAw6o3uGQH5/GjwPuDHi4IYwAAAAAOgAAAAAIAACAAAABuLejSg+2BDswQrmojyylFX3T/DSEil8Cw6DkLoW97cRAAAACw0Ur0SDvak27ar9A0GUtRQAAAAMjeSy24MzM6vlx8y5DDrchpQdGyAs35PfndXCyhLtCvazhrNjSM377vW0KQhPdf4ZrmTSGgO51cgABJ59xgSEs</PackagePassword>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Stage to NDS"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Stage to NDS"
+      DTS:DTSID="{8DF51C0E-C917-427C-8331-0A841CA92F17}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Stage to NDS"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>stage_to_nds.dtsx</PackageName>
+          <PackagePassword
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASKgWMCuAeEOpdSAVvIeMugAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAN/hJno7Lm76O2P96u2phCFyRhaEgFy3TKdNthO5PMPAAAAAAOgAAAAAIAACAAAAA+WljUw5CKHgkynk9upel3zzrax8zYA/3gbk7xttKAaRAAAADW8Wmw02DgpMeRxDpo2YqVQAAAAAPlmxixwX9AvqyUZ9InrFqkCLFx2XY/CwNsOqU9HazcmjT+tXB0QCN12bgZm/WTQOZH9mjC9FYU6v/RPEM+Lxw</PackagePassword>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0970A268-3926-4DEF-8843-D3803B7CEE6C}"
+      DTS:From="Package\Source system to Stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Stage to NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{922571BE-FE86-4EE4-A2CF-FB70A9C4B517}"
+      DTS:From="Package\Stage to NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\NDS to DDS" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\NDS to DDS"
+          TopLeft="413.888866274998,257.111109323192" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\Source system to Stage"
+          TopLeft="388.888867640938,76.0740735450644" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Stage to NDS"
+          TopLeft="412.037014524327,163.703702565329" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="483.062941082632,117.674073545064">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.0296290202641"
+              Start="0,0"
+              End="0,38.5296290202641">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5296290202641" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="482.562940399662,205.303702565329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.8074067578639"
+              Start="0,0"
+              End="0,44.3074067578639">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.3074067578639" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

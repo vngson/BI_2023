@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>2023_CQ_BI_13_OLAP</Database>
+    <Server>REVISION-PC</Server>
+    <ConnectionString>Data Source=REVISION-PC;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>zqJ80pAO/FzmvEuUcEKz8h0fo7o=20/12/2023 4:43:17 CH10/12/2023 2:31:37 CH</TimeStamp>
+        <ID>
+          <String>CQ BI 13 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>cMe0QwkE13B/avpIRD3BD3dUing=10/12/2023 2:37:13 CH10/12/2023 2:33:09 CH</TimeStamp>
+        <ID>
+          <String>CQ BI 13 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>2vmUpblU0oY8QD1xw9kyd9N7vvo=11/12/2023 6:33:11 CH10/12/2023 2:39:22 CH</TimeStamp>
+        <ID>
+          <String>Dim Customer Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>66K9tYEaOTElzvBgcNbU/rEOqRY=11/12/2023 6:33:31 CH10/12/2023 2:39:22 CH</TimeStamp>
+        <ID>
+          <String>Dim Datetime</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KxzepL4KdG+RYa+GtCpHL1VFByI=11/12/2023 6:34:32 CH10/12/2023 2:39:22 CH</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>dHBOfrGBeqJDxZMAiWfKJnMgZyU=11/12/2023 6:44:38 CH10/12/2023 2:39:22 CH</TimeStamp>
+        <ID>
+          <String>Dim Branch</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6iZraXQ72trBUV6HOZA91DihXJI=11/12/2023 6:34:58 CH10/12/2023 2:39:22 CH</TimeStamp>
+        <ID>
+          <String>Dim Payment Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>Ahn7RLhqjUWzhS/9uzYjxCpCGuk=11/12/2023 6:43:35 CH10/12/2023 2:39:22 CH4QIl6wHodeXVDPtQ0AURx0PzT+0=10/12/2023 2:39:22 CH10/12/2023 2:39:22 CH</TimeStamp>
+        <ID>
+          <String>CQ BI 13 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Ym38wxhCRSdkJFTb37lwiKey0AA=10/12/2023 2:12:12 CH10/12/2023 2:12:11 CH</TimeStamp>
+      <ID>
+        <String>2023_CQ_BI_13_OLAP</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2023-12-24T05:39:29.11Z</LastDeployed>
+</DeploymentSnapshot>

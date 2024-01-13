@@ -1,0 +1,78 @@
+-- Requirement 1
+SELECT NON EMPTY {
+	[Measures].[Total Purchase Times]
+} ON COLUMNS,
+NON EMPTY {
+	(
+		[Dim Datetime].[Year Number].[Year Number].ALLMEMBERS
+		*[Dim Datetime].[Month Number].[Month Number].ALLMEMBERS 
+		*[Dim Datetime].[Day Number].[Day Number].ALLMEMBERS
+	)
+}
+DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [CQ BI 13 DDS]
+
+-- Requirement 2
+SELECT NON EMPTY {
+	[Measures].[Total Income]
+} ON COLUMNS,
+NON EMPTY {
+	(
+		[Dim Datetime].[Year Number].[Year Number].ALLMEMBERS
+		* [Dim Datetime].[Month Number].[Month Number].ALLMEMBERS
+		* [Dim Datetime].[Day Number].[Day Number].ALLMEMBERS
+		* [Dim Customer Type].[Customer Type Name].[Customer Type Name].ALLMEMBERS
+		* [Dim Branch].[Nk Branch Code].[Nk Branch Code].ALLMEMBERS
+	)
+} DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS
+FROM [CQ BI 13 DDS]
+
+-- Requirement 3
+SELECT NON EMPTY {
+	[Measures].[Total Purchase Times]
+} ON COLUMNS,
+NON EMPTY {
+	(
+		[Dim Datetime].[Year Number].[Year Number].ALLMEMBERS
+		* [Dim Datetime].[Month Number].[Month Number].ALLMEMBERS
+		* [Dim Branch].[Nk Branch Code].[NK Branch Code].ALLMEMBERS
+		* [Dim Payment Type].[Payment Type Name].[Payment Type Name].ALLMEMBERS
+	)
+} DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [CQ BI 13 DDS]
+
+-- Requirement 4
+SELECT NON EMPTY {
+	[Measures].[Total Rating Score]
+} ON COLUMNS,
+NON EMPTY {
+	(
+		[Dim Customer Type].[Customer Type Name].[Customer Type Name].ALLMEMBERS
+		* [Dim Product].[Product Line Name].[Product Line Name].ALLMEMBERS
+	)
+} DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS
+FROM [CQ BI 13 DDS]
+
+-- Requirement 5
+SELECT NON EMPTY {
+	[Measures].[Total Sold Products]
+} ON COLUMNS,
+NON EMPTY {
+	(
+		[Dim Datetime].[Year Number].[Year Number].ALLMEMBERS
+		*[Dim Datetime].[Month Number].[Month Number].ALLMEMBERS
+		*[Dim Datetime].[Day Number].[Day Number].ALLMEMBERS 
+		*[Dim Datetime].[Hour Number].[Hour Number].ALLMEMBERS
+	)
+} DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [CQ BI 13 DDS]
+
+-- Requirement 6
+SELECT NON EMPTY {
+	[Measures].[Total Female Customers]
+} ON COLUMNS,
+NON EMPTY {
+	(
+		[Dim Product].[Product Line Name].[Product Line Name].ALLMEMBERS
+	)
+} DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [CQ BI 13 DDS]
